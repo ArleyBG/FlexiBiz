@@ -1,0 +1,71 @@
+svg.size-3.text-blue-500.iconoCerrarDetalle {
+    max-width: 20px;
+}
+aside.detalle-Activado {
+    background: white;
+    position: relative;
+    top: 56px;
+    z-index: 30;
+    height: 85vh;
+    width: 100%;
+    max-width: 264px;
+    right: 0;
+    padding: 14px;
+    border-left: 1.5px solid black;
+    border-top: 1.5px solid;
+    border-bottom: 1.5px solid;
+    display: inline-block;
+    position: fixed;
+    border-radius: 16px 0 0 16px;
+}
+.containerCerrar {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.containerIconoCerrar {
+    font-family: cursive;
+    font-size: 28px;
+    cursor: pointer;
+}
+.containerIconoCerrar:hover {
+    color: red;
+}
+
+aside.detalle-Inactivo {
+    display: none;
+}
+
+img.imgDetalle {
+    width: 100%;
+    border-radius: 16px;
+}
+
+p.containerDetalleProductos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h2.titulo-Detalle {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+span.detalleProductoTitulo {
+    font-weight: 800;
+    font-family: cursive;
+}
+
+.containerTotalOrden button {
+    width: 100%;
+    background: black;
+    color: white;
+    height: 39px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+}

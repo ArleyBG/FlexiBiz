@@ -1,0 +1,58 @@
+.containerGridCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 992px;
+    margin-top: 16px;
+    max-width: 800px;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: #4c4909;
+    max-width: 409px;
+    margin: 0 auto;
+    margin-top: 27px;
+}
+
+input.inputFiltroGeneral {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    /* left: calc(50% - 150px); */
+    width: 260px;
+    height: 41px;
+    border: 0;
+    margin: 28px 0;
+}
+
+input.inputFiltroGeneral:focus {
+    outline: none;
+}
+
+.containerBucadorProductos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 349px;
+    margin: 0 auto;
+    height: 43px;
+    border-bottom: 1.5px solid blue;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+.containerBucadorProductos:hover {
+    border-bottom: 2px solid rgb(0, 204, 255);
+}
+
+.containerBucadorProductos img {
+    max-width: 23px;
+    display: inline-block;
+}
