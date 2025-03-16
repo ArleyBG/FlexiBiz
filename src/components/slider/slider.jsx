@@ -4,11 +4,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './styles.css';
 import { Pagination } from 'swiper/modules';
+import Button from '../button/button';
 
 const Slide = ({ burgers }) => {
   return (
     <Swiper
-      slidesPerView={5}
+      slidesPerView={4}
       spaceBetween={30}
       pagination={{
         clickable: true,
@@ -18,10 +19,12 @@ const Slide = ({ burgers }) => {
     >
       {burgers.map((burger, index) => (
         <SwiperSlide key={index}>
-          <div id="description-card">
-            <img src={burger.img} alt={burger.nombre} className="img-card" />
+          <div className="description-card">
+            <div className='container-img'>
+              <img src={burger.img} alt={burger.nombre} className="img-card" />
+              <Button />
+            </div>
             <h2 className="name-product">{burger.nombre}</h2>
-            <p className="description-product">{burger.descripcion}</p>
             <p className="valor-product">${burger.valor.toFixed(2)}</p>
           </div>
         </SwiperSlide>

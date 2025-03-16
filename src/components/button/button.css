@@ -1,0 +1,19 @@
+.container-img {
+    position: relative;
+}
+
+.icono {
+    font-size: 48px;
+    margin-bottom: 3px;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
