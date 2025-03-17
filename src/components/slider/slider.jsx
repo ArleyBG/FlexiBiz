@@ -8,28 +8,52 @@ import Button from '../button/button';
 
 const Slide = ({ burgers }) => {
   return (
-    <Swiper
-      slidesPerView={4}
-      spaceBetween={30}
+    <>
+      <Swiper
+      slidesPerView="2"
+      spaceBetween={10}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+        1440: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+        },
+      }}
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
-      className="mySwiper"
-    >
-      {burgers.map((burger, index) => (
-        <SwiperSlide key={index}>
-          <div className="description-card">
-            <div className='container-img'>
-              <img src={burger.img} alt={burger.nombre} className="img-card" />
-              <Button />
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {burgers.map((burger, index) => (
+          <SwiperSlide key={index}>
+            <div className="description-card">
+              <div className='container-img'>
+                <img src={burger.img} alt={burger.nombre} className="img-card" />
+                <Button />
+              </div>
+              <h4 className="name-product">{burger.nombre}</h4>
+              <p className="valor-product">${burger.valor.toFixed(2)}</p>
             </div>
-            <h2 className="name-product">{burger.nombre}</h2>
-            <p className="valor-product">${burger.valor.toFixed(2)}</p>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
 }
 
