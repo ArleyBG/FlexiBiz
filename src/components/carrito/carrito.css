@@ -1,18 +1,19 @@
 .carrito {
-    position: absolute;
-    right: 2%;
+  position: absolute;
+  right: 2%;
 }
 
 .icon-carrito {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .button-carrito {
-    background-color: #FFCF57;
-    border: none;
-    border-radius: 100%;
-    width: 60px;
-    height: 60px;
-    color: #000;
-    cursor: pointer;
+  background-color: #ffcf57;
+  border: none;
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+  color: #000;
+  cursor: pointer;
 }
+

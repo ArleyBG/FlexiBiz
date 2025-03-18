@@ -33,6 +33,10 @@ const Slide = ({ burgers }) => {
           slidesPerView: 5,
           spaceBetween: 30,
         },
+        1840: {
+          slidesPerView: 5,
+          spaceBetween: 40,
+        },
       }}
       pagination={{
         clickable: true,

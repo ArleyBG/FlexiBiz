@@ -1,9 +1,75 @@
 .slider {
     margin: 3% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-card {
+    font-size: 2rem; /* Ajusta el tamaño de la fuente de manera relativa */
+    width: 100%;
 }
 
 .error {
     margin: 5%;
-    font-size: 20px;
+    font-size: 1.25rem; /* Ajusta el tamaño de la fuente de manera relativa */
     color: red;
+}
+
+@media (min-width: 2000px) {
+    .slider {
+        margin: 3% 15%;
+    }
+
+    .title-card {
+        font-size: 1.5rem;
+    }
+
+    .error {
+        font-size: 1rem;
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (min-width: 2500px) {
+    .slider {
+        margin: 3% 20%;
+    }
+
+    .title-card {
+        font-size: 1.5rem;
+    }
+
+    .error {
+        font-size: 1rem;
+    }
+}
+
+/* Media query para zoom por debajo del 50% */
+@media (min-width: 4000px) {
+    .slider {
+        margin: 3% 25%;
+    }
+
+    .title-card {
+        font-size: 1.5rem;
+    }
+
+    .error {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 6000px) {
+    .slider {
+        margin: 3% 30%;
+    }
+
+    .title-card {
+        font-size: 1.5rem;
+    }
+
+    .error {
+        font-size: 1rem;
+    }
 }
