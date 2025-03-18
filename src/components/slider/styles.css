@@ -49,3 +49,12 @@ body {
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .name-product {
+    font-size: 12px;
+  }
+  .valor-product {
+    font-size: 12px;
+  }
+}

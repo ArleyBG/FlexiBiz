@@ -16,60 +16,39 @@
     color: red;
 }
 
+@media (max-width: 768px) {
+    .title-card {
+        font-size: 1.5rem;
+    }
+}
+
 @media (min-width: 2000px) {
     .slider {
         margin: 3% 15%;
     }
 
-    .title-card {
+    .title-card, .error {
         font-size: 1.5rem;
     }
-
     .error {
         font-size: 1rem;
     }
 }
 
-/* Media query para pantallas pequeñas */
 @media (min-width: 2500px) {
     .slider {
         margin: 3% 20%;
     }
-
-    .title-card {
-        font-size: 1.5rem;
-    }
-
-    .error {
-        font-size: 1rem;
-    }
 }
 
-/* Media query para zoom por debajo del 50% */
 @media (min-width: 4000px) {
     .slider {
         margin: 3% 25%;
-    }
-
-    .title-card {
-        font-size: 1.5rem;
-    }
-
-    .error {
-        font-size: 1rem;
     }
 }
 
 @media (min-width: 6000px) {
     .slider {
         margin: 3% 30%;
-    }
-
-    .title-card {
-        font-size: 1.5rem;
-    }
-
-    .error {
-        font-size: 1rem;
     }
 }

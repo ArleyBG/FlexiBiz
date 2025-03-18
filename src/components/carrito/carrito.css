@@ -17,3 +17,13 @@
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .icon-carrito {
+    font-size: 15px;
+  }
+  .button-carrito {
+    width: 35px;
+    height: 35px;
+  }
+}
+
