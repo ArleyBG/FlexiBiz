@@ -44,15 +44,15 @@ const Slide = ({ burgers }) => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {burgers.map((burger, index) => (
-          <SwiperSlide key={index}>
+        {burgers.map((burger) => (
+          <SwiperSlide key={burger.id} className="burguer-id">
             <div className="description-card">
               <div className='container-img'>
-                <img src={burger.img} alt={burger.nombre} className="img-card" />
+                <img src={burger.imagen} alt={burger.nombre} className="img-card" />
                 <Button />
               </div>
               <h4 className="name-product">{burger.nombre}</h4>
-              <p className="valor-product">${burger.valor.toFixed(2)}</p>
+              <p className="valor-product">${burger.valor}</p>
             </div>
           </SwiperSlide>
         ))}

@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
 import './card.css'
 import Slide from '../../components/slider/slider'
-import Products from '../../data/products.json'
 
 const Card = () => {
   const [burgers, setBurgers] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    try {
-      setBurgers(Products.Hamburgesas);
-    } catch (error) {
-      console.error("Error al cargar los datos", error)
-      setError(error.message)
-    }
+    fetch("https://apimocha.com/burgergrill/posts")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      }) 
+      .then((data) => setBurgers(data))
+      .catch((error) => {
+        console.error("Error al cargar los datos", error);
+        setError(error.message);
+      });
   }, []);
 
   if (error) {

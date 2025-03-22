@@ -1,0 +1,41 @@
+{
+    "Hamburgesas": [
+        {
+            "id": "1",
+            "nombre": "Combo Hamburguesa",
+            "imagen": "https://www.unileverfoodsolutions.com.co/dam/global-ufs/mcos/NOLA/calcmenu/recipes/col-recipies/fruco-tomate-cocineros/HAMBURGUESA%201200x709.png",
+            "descripcion": "Hamburguesa doble queso, tocineta y vegetales",
+            "valor": "30.000"
+        }
+    ],
+    "pizzas": [
+        {
+            "id": "2",
+            "nombre": "Combo Hamburguesa",
+            "imagen": "https://www.unileverfoodsolutions.com.co/dam/global-ufs/mcos/NOLA/calcmenu/recipes/col-recipies/fruco-tomate-cocineros/HAMBURGUESA%201200x709.png",
+            "descripcion": "Hamburguesa doble queso, tocineta y vegetales",
+            "valor": "30.000",
+            "categoria": "Pizzas"
+        }
+    ],
+    "Carnes": [
+        {
+            "id": "3",
+            "nombre": "Combo Hamburguesa",
+            "imagen": "https://www.unileverfoodsolutions.com.co/dam/global-ufs/mcos/NOLA/calcmenu/recipes/col-recipies/fruco-tomate-cocineros/HAMBURGUESA%201200x709.png",
+            "descripcion": "Hamburguesa doble queso, tocineta y vegetales",
+            "valor": "30.000",
+            "categoria": "Pizzas"
+        }
+    ],
+    "Mar": [
+        {
+            "id": "4",
+            "nombre": "Combo Hamburguesa",
+            "imagen": "https://www.unileverfoodsolutions.com.co/dam/global-ufs/mcos/NOLA/calcmenu/recipes/col-recipies/fruco-tomate-cocineros/HAMBURGUESA%201200x709.png",
+            "descripcion": "Hamburguesa doble queso, tocineta y vegetales",
+            "valor": "30.000",
+            "categoria": "Pizzas"
+        }
+    ]
+}
