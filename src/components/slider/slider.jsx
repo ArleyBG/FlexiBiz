@@ -6,7 +6,7 @@ import './styles.css';
 import { Pagination } from 'swiper/modules';
 import Button from '../button/button';
 
-const Slide = ({ burgers }) => {
+const Slide = ({ burgers, productClick }) => {
   return (
     <>
       <Swiper
@@ -45,8 +45,10 @@ const Slide = ({ burgers }) => {
         className="mySwiper"
       >
         {burgers.map((burger) => (
-          <SwiperSlide key={burger.id} className="burguer-id">
-            <div className="description-card">
+          <SwiperSlide key={burger.id} className="burger-id">
+            <div className="description-card"
+              onClick={() => productClick(burger)} // envía los datos del producto a la card para manejar los eventos
+            >
               <div className='container-img'>
                 <img src={burger.imagen} alt={burger.nombre} className="img-card" />
                 <Button />
