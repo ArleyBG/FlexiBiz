@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './productModal.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 const ProductModal = ({ product, offModal }) => {
   const [quantity, setQuantity] = useState(1);
@@ -39,32 +41,41 @@ const ProductModal = ({ product, offModal }) => {
 	return (
 		<div className="modal">
 			<div className='modal-content'>
-				<button className='close-button' onClick={offModal}>X</button>
-				<img src={product.imagen} alt={product.nombre} className='product-image' />
-				<h2 className='product-name'>{product.nombre}</h2>
-				<p className='product-description'>{product.descripcion}</p>
-				<p className='product-valor'><strong>Precio:</strong> ${product.valor}</p>
-				<div className='ingredientes'>
-					<h4>Ingredientes:</h4>
-					{product.ingredientes.map((i, index) => (
-						<label key={index}>
-							<input 
-								type='checkbox' 
-								checked={ingredients.includes(i)} 
-								onChange={() => addIngredient(i)} 
-							/>
-							{i}
-						</label>
-					))}
+				<div className='modal-header'>
+					<h2 className='product-name'>{product.nombre}</h2>
+					<button className='close-button' onClick={offModal}>
+						<FontAwesomeIcon icon={faCircleXmark} />
+					</button>
+				</div>
+				<div className='modal-body'>
+					<div className='product-image-container'> 
+						<img src={product.imagen} alt={product.nombre} className='product-image' />
+					</div>
+					<div className='product-ingredients'>
+						<p className='product-valor'><strong>${product.valor}</strong></p>
+						<p className='product-description'>{product.descripcion}</p>
+						<h4>Ingredientes:</h4>
+						{product.ingredientes.map((i, index) => (
+							<label key={index}>
+								<input 
+									type='checkbox' 
+									checked={ingredients.includes(i)} 
+									onChange={() => addIngredient(i)} 
+								/>
+								{i}
+							</label>
+						))}
+					</div>
 				</div>
 				<div className='quantity'>
-					<button onClick={decrement}>-</button>
-					<span>{quantity}</span>
-					<button onClick={increment}>+</button>
+					<div className='quantity-buttons'> 
+						<button onClick={decrement}>-</button>
+						<span>{quantity}</span>
+						<button onClick={increment}>+</button>
+					</div>
+					<button className='add-product' onClick={addProductAndContinue}>Agregar y seguir comprando</button>
+					<button className='pay-product' onClick={addProductAndPay}>Agregar e ir a pagar <strong>${total}</strong></button>
 				</div>
-				<p className='total'><strong>Total:</strong> ${total}</p>
-				<button className='add-product' onClick={addProductAndContinue}>Añadir al carrito y continuar comprando</button>
-				<button className='pay-product' onClick={addProductAndPay}>Agregar e ir a pagar</button>
 			</div>
 		</div>
 	)
