@@ -7,6 +7,7 @@ const ProductModal = ({ product, offModal }) => {
   const [quantity, setQuantity] = useState(1);
 	const [ingredients, setIngredients] =useState(product.ingredientes || []);
 	const [total, setTotal] = useState(product.valor);
+	const [accordion, setAccordion] = useState(true);
 
 	const increment = () => {
 		setQuantity(quantity + 1);
@@ -38,6 +39,10 @@ const ProductModal = ({ product, offModal }) => {
 		offModal();
 	};
 
+	const toggleAccordion = () => {
+		setAccordion(!accordion);
+	}
+
 	return (
 		<div className="modal">
 			<div className='modal-content'>
@@ -52,19 +57,26 @@ const ProductModal = ({ product, offModal }) => {
 						<img src={product.imagen} alt={product.nombre} className='product-image' />
 					</div>
 					<div className='product-ingredients'>
-						<p className='product-valor'><strong>${product.valor}</strong></p>
+						<p className='product-valor'><strong>$ {product.valor}</strong></p>
 						<p className='product-description'>{product.descripcion}</p>
-						<h4>Ingredientes:</h4>
-						{product.ingredientes.map((i, index) => (
-							<label key={index}>
-								<input 
-									type='checkbox' 
-									checked={ingredients.includes(i)} 
-									onChange={() => addIngredient(i)} 
-								/>
-								{i}
-							</label>
-						))}
+						<h4 onClick={toggleAccordion}>
+							Personalizarla:
+							<span>{accordion ? "▲" : "▼"}</span>
+						</h4>
+						{accordion && (
+							<div className='accordion-content'>
+								{product.ingredientes.map((i, index) => (
+									<label key={index}>
+										<input 
+											type='checkbox' 
+											checked={ingredients.includes(i)} 
+											onChange={() => addIngredient(i)} 
+										/>
+										{i}
+									</label>
+								))}
+							</div>
+						)}
 					</div>
 				</div>
 				<div className='quantity'>

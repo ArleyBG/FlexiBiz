@@ -4,8 +4,8 @@
             "id": "1",
             "nombre": "Combo Hamburguesa",
             "imagen": "https://www.unileverfoodsolutions.com.co/dam/global-ufs/mcos/NOLA/calcmenu/recipes/col-recipies/fruco-tomate-cocineros/HAMBURGUESA%201200x709.png",
-            "descripcion": "Hamburguesa doble queso",
-            "valor": "30.000",
+            "descripcion": "Hamburguesa 100% carne de res a la parrilla de 400g con salsa bbq, queso mozzarella, lechuga, tomate en rodajas, cebolla en rodajas y salsas",
+            "valor": 30000.00,
             "ingredientes": [
                 "Pan",
                 "Carne",
@@ -13,12 +13,33 @@
                 "Tocineta",
                 "Vegetales"
             ],
-            "adicionar": [
-                "queso",
-                "tocineta",
-                "tomate",
-                "lechuga",
-                "cebolla"
+            "adicionar": [ 
+                {
+                    "nombre": "Papas",
+                    "valor": 5000.00
+                },
+                {
+                    "nombre": "Tocineta",
+                    "valor": 3000.00
+                },
+                {
+                    "nombre": "Queso",
+                    "valor": 5000.00
+                }
+            ],
+            "bebidas": [
+                {
+                    "nombre": "Coca Cola",
+                    "valor": 3000.00
+                },
+                {
+                    "nombre": "Pepsi",
+                    "valor": 2500.00
+                },
+                {
+                    "nombre": "Sprite",
+                    "valor": 2500.00
+                }
             ]
         }
     ],

@@ -41,15 +41,50 @@
 
   .modal-body {
     display: flex;
+    flex-direction: row; /* Alinear elementos por fila */
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+  }
+
+  .product-image-container {
+    width: 100%;
   }
   
   .product-image {
-    width: 100%;
-    height: 200px;
-    margin: 50px 30px 0 100px;
+    width: 60%;
+    margin-top: 10px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
+  }
+
+  .product-ingredients, .accordion-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+
+  .product-ingredients > h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  .accordion-content {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    
+  }
+
+  .accordion-content > label {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
   }
 
   .quantity {
@@ -62,12 +97,17 @@
     padding: 20px;
   }
 
+  .add-product:hover, .pay-product:hover {
+    background: #f0f0f0;
+  }
+
   .add-product, .pay-product {
     border: #ccc 1px solid;
-    border-radius: 4%;
+    border-radius: 4px;
     padding: 12px;
     font-size: 16px;
     border: none;
+    cursor: pointer;
   }
 
   .quantity-buttons {
@@ -75,7 +115,7 @@
     gap: 50px;
     align-items: center;
     border: #ccc 1px solid;
-    border-radius: 4%;
+    border-radius: 4px;
     padding: 5px;
   }
 
